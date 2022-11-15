@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Baixar do Instagram</title>
+    
+    <link rel="stylesheet" href="style.css" />
+
+    <style type="text/css">
+    
+    * { font-family: -apple-system, 'SF Pro Display' }
+    
+    @media (prefers-color-scheme: dark) {
+        body {
+            background-color: #000;
+        }
+        
+        #customDropdown{
+            background-color: #222!important;
+            box-shadow: 0px 5px 40px #11111140;
+        }
+        
+        h2 {
+            color: white;
+        }
+        
+        h3, p {
+            color:#777;
+        }
+        
+        #header {
+            background-color:#000;
+        }
+        
+        #video-loaded, #video-loading {
+            background-color: #111!important;
+        }
+        
+        .shadow-videocover {
+                 opacity: 0.9;
+               }
+    }
+    
+     @media (prefers-color-scheme: light) {
+         #header {
+                     background-color:#f2f2f5;
+                     box-shadow: 0px 5px 40px #33333340;
+                 }
+                 
+        .text-info {
+            color:#888!important;
+        }
+        
+        .shadow-videocover {
+                 opacity: 0.7;
+               }
+     }
+    
+    body {
+        margin:0;
+    }
+    
+       #header {
+           width: 100%;
+           height: 60px;
+           display: flex;
+           padding-top:15px;
+           padding-bottom:15px;
+           margin: 0px;
+           z-index: 9999999999999999999999999;
+           position: fixed;
+           
+       }
+       
+       #video-loading {
+           padding-top:200px ;
+           text-align: center;
+           padding-bottom:600px;
+       }
+       
+       #video-loaded {
+           padding-bottom:300px
+              }
+       
+       #video-cover {
+           display: inline-grid
+       }
+       
+       .hero-videocover {
+       position: relative;
+       border-radius: 20px;
+      
+       }
+       
+       .shadow-videocover {
+         filter: blur(45px);
+       }
+       
+       @media(min-width:1024px){
+       #video-loaded{
+       padding-top: 250px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       z-index: 0;
+       }
+       
+       .shadow-videocover, .hero-videocover {
+       width:700px}
+       
+       .hero-videocover {
+               margin-top:-380px;
+       }
+       
+       #video-info {
+           margin-left: 80px;
+       }
+       
+       #video-cover {
+                  margin-left: 50px;
+              }
+              
+        #header {
+            justify-content: flex-end;
+        }
+        
+        #header img {
+                    margin-right: 15px;
+                }
+       }
+       
+       @media(max-width:1024px){
+       #video-loaded{
+       padding-top: 180px;
+       text-align:center
+       }
+       
+       .shadow-videocover, .hero-videocover {
+       width:300px
+       }
+       
+       .hero-videocover {
+        margin-top:-180px;}
+       
+       #header {
+           place-content: center;
+       }
+       
+       #customDropdown {
+           margin-left: 45px;
+       }
+       .mrl {
+           margin-right:20px;
+           margin-left:20px;
+       }
+       }
+       
+       .dropdown{
+         text-align: center;
+         left: 0;
+         top: 30%;
+         position: relative;
+       }
+       #customDropdown{
+         height: 50px;  
+         width: 200px;
+         padding: 0 20px;
+         border-radius: 20px;
+         border: 1.5px solid #0084FF;
+         color: #0084FF;
+         font-size: 20px;
+         outline: none;
+         appearance: none; 
+         -webkit-appearance: none;
+         -moz-appearance: none;
+         background-color:#f2f2f5
+       }
+       #goBtn{
+         height: 50px;
+         width: 50px;
+         padding: 16px 28px;
+         border-radius: 20PX;
+         background-color:#0084FF;
+         color: #fff;
+         font-weight: bold;
+         font-size: 15px;
+         position: relative;
+         right: 54px;
+         bottom: 1.25px;
+         cursor: pointer;
+       }
+       
+       
+    </style>
+</head>
+
+<body>
+
+<div id="header">
+    <img src="https://professordoiphone.com.br/wp-content/uploads/2022/11/16678751536369c151a4477.png">
+</div>
+    
+    
+<div id="video-loading"> 
+    <img height="40px" src="https://checkout.professordoiphone.com.br/images/aguarde.gif">
+    <h2>Preparando seu vídeo...</h2>
+    </div>
+    
+<div id="video-loaded"> 
+
+<div id="video-cover">
+
+    <img class="shadow-videocover" src="https://i.ytimg.com/vi/KR0g-1hnQPA/maxresdefault.jpg?v=5f7c9f6d">
+    
+    <img class="hero-videocover" src="https://i.ytimg.com/vi/KR0g-1hnQPA/maxresdefault.jpg?v=5f7c9f6d">
+    
+</div>
+
+<div id="video-info">
+<h2 class="mrl" style="font-weight:600">Evento especial da Apple de Setembro de 2022</h2>
+<h3 class="mrl" style="font-weight:500;margin-bottom:40px;margin-top:-10px">Apple</h3>
+
+<div>
+  <select id="customDropdown" required>
+    <option value="value-one">Vídeo</option>
+    <option value="value-one">Áudio</option>
+  </select>
+  <a id="goBtn" class="btn">BAIXAR</a>
+</div>
+
+<p class="mrl text-info" style="margin-top:40px; font-weight:400">A melhor qualidade disponível já foi selecionada para você.</p>
+
+    
+</div>
+
+</div>
+
+
+</body>
+</html>
+
