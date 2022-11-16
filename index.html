@@ -104,7 +104,6 @@
        }
        
        .shadow-videocover {
-         filter: blur(80px);
          -webkit-backface-visibility: hidden;
          -moz-backface-visibility: hidden;
          -webkit-transform: translate3d(0, 0, 0);
@@ -122,6 +121,9 @@
        
        .shadow-videocover, .hero-videocover {
        width:700px}
+           
+           .shadow-videocover {
+               filter: blur(100px)}
        
        .hero-videocover {
                margin-top:-400px;
@@ -195,7 +197,10 @@
        padding-top: 180px;
        text-align:center
        }
-       
+       .shadow-videocover {
+         filter: blur(80px);
+           }
+           
        .shadow-videocover, .hero-videocover {
        max-width:360px;
        justify-self: center;
