@@ -95,6 +95,10 @@
        
        .shadow-videocover {
          filter: blur(45px);
+         -webkit-backface-visibility: hidden;
+         -moz-backface-visibility: hidden;
+         -webkit-transform: translate3d(0, 0, 0);
+         -moz-transform: translate3d(0, 0, 0);
        }
        
        @media(min-width:1024px){
@@ -137,11 +141,11 @@
        }
        
        .shadow-videocover, .hero-videocover {
-       width:300px
+       width:330px
        }
        
        .hero-videocover {
-        margin-top:-180px;}
+        margin-top:-190px;}
        
        #header {
            place-content: center;
@@ -154,6 +158,10 @@
            margin-right:20px;
            margin-left:20px;
        }
+       .mrl-40 {
+                  margin-right:40px;
+                  margin-left:40px;
+              }
        }
        
        .dropdown{
@@ -218,7 +226,7 @@
 </div>
 
 <div id="video-info">
-<h2 class="mrl" style="font-weight:600">Evento especial da Apple de Setembro de 2022</h2>
+<h2 class="mrl" style="font-weight:600">Apple Event — October 13</h2>
 <h3 class="mrl" style="font-weight:500;margin-bottom:40px;margin-top:-10px">Apple</h3>
 
 <div>
@@ -229,13 +237,29 @@
   <a id="goBtn" class="btn">BAIXAR</a>
 </div>
 
-<p class="mrl text-info" style="margin-top:40px; font-weight:400">A melhor qualidade disponível já foi selecionada para você.</p>
+<p class="mrl-40 text-info" style="margin-top:40px; font-weight:400">A melhor qualidade disponível já foi selecionada para você.</p>
 
     
 </div>
 
 </div>
 
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+$(document).ready( function() {
+$('#video-loading').delay(1500).fadeOut();
+});
+</script>
+<script>
+// O HTML da div precisa estar acima.
+// Esconde a div no início
+var div = document.getElementById('video-loaded');
+div.style.display = 'none';
+// Mostra a div após 1 minuto
+setTimeout(function() {
+div.style.display = 'block';
+}, 1500);
+</script>
 
 </body>
 </html>
