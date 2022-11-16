@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="utf-8">
     <title>Baixar do Instagram</title>
@@ -26,7 +26,7 @@
         }
         
         h3, p {
-            color:#777;
+            color:#808080;
         }
         
         #header {
@@ -53,12 +53,17 @@
         }
         
         .shadow-videocover {
-                 opacity: 0.7;
+                 opacity: 0.9;
                }
                
-               h3, p {
-                           color:#777;
-                       }
+        h3 {
+                color:#777;
+                }
+        p {
+                color:#C8C8C8;
+                }
+                       
+                       
      }
     
     body {
@@ -99,7 +104,7 @@
        }
        
        .shadow-videocover {
-         filter: blur(45px);
+         filter: blur(90px);
          -webkit-backface-visibility: hidden;
          -moz-backface-visibility: hidden;
          -webkit-transform: translate3d(0, 0, 0);
@@ -119,25 +124,71 @@
        width:700px}
        
        .hero-videocover {
-               margin-top:-380px;
+               margin-top:-400px;
+           
        }
        
        #video-info {
            margin-left: 80px;
+           
        }
        
        #video-cover {
                   margin-left: 50px;
-              }
+           
+       }
               
         #header {
             justify-content: flex-end;
+            
         }
         
         #header img {
                     margin-right: 15px;
-                }
+            
+        }
+                
+        .dropdown{
+                 text-align: center;
+                 left: 0;
+                 top: 30%;
+                 position: relative;
+               }
+               #customDropdown{
+                 height: 50px;  
+                 width: 200px;
+                 padding: 0 20px;
+                 border-radius: 50px;
+                 border: 1.5px solid #0084FF;
+                 color: #0084FF;
+                 font-size: 20px;
+                 outline: none;
+                 appearance: none; 
+                 -webkit-appearance: none;
+                 -moz-appearance: none;
+                 background-color:#f2f2f5
+               }
+               #goBtn{
+                 height: 50px;
+                 width: 50px;
+                 padding: 16px 28px;
+                 border-radius: 50PX;
+                 background-color:#0084FF;
+                 color: #fff;
+                 font-weight: bold;
+                 font-size: 15px;
+                 position: relative;
+                 right: 54px;
+                 bottom: 1px;
+                 cursor: pointer;
+               }
+               
+               #goBtn:hover{
+                   background-color:#0065C4;
+               }
        }
+       
+       
        
        @media(max-width:1024px){
        #video-loaded{
@@ -146,11 +197,12 @@
        }
        
        .shadow-videocover, .hero-videocover {
-       width:330px
+       max-width:360px;
+       justify-self: center;
        }
        
        .hero-videocover {
-        margin-top:-190px;}
+        margin-top:-210px;}
        
        #header {
            place-content: center;
@@ -167,42 +219,46 @@
                   margin-right:40px;
                   margin-left:40px;
               }
+              
+              .dropdown{
+                       text-align: center;
+                       left: 0;
+                       top: 30%;
+                       position: relative;
+                     }
+                     #customDropdown{
+                       height: 49px;  
+                       width: 200px;
+                       padding: 0 20px;
+                       border-radius: 50px;
+                       border: 1.5px solid #0084FF;
+                       color: #0084FF;
+                       font-size: 20px;
+                       outline: none;
+                       appearance: none; 
+                       -webkit-appearance: none;
+                       -moz-appearance: none;
+                       background-color:#f2f2f5
+                     }
+                     #goBtn{
+                       height: 50px;
+                       width: 50px;
+                       padding: 15px 28px;
+                       border-radius: 50PX;
+                       background-color:#0084FF;
+                       color: #fff;
+                       font-weight: bold;
+                       font-size: 15px;
+                       position: relative;
+                       right: 54px;
+                       bottom: 2px;
+                       cursor: pointer;
+                     }
+                     #goBtn:hover{
+                                        background-color:#0065C4;
+                                    }
        }
        
-       .dropdown{
-         text-align: center;
-         left: 0;
-         top: 30%;
-         position: relative;
-       }
-       #customDropdown{
-         height: 49px;  
-         width: 200px;
-         padding: 0 20px;
-         border-radius: 50px;
-         border: 1.5px solid #0084FF;
-         color: #0084FF;
-         font-size: 20px;
-         outline: none;
-         appearance: none; 
-         -webkit-appearance: none;
-         -moz-appearance: none;
-         background-color:#f2f2f5
-       }
-       #goBtn{
-         height: 50px;
-         width: 50px;
-         padding: 15px 28px;
-         border-radius: 50PX;
-         background-color:#0084FF;
-         color: #fff;
-         font-weight: bold;
-         font-size: 15px;
-         position: relative;
-         right: 54px;
-         bottom: 2px;
-         cursor: pointer;
-       }
        
        
     </style>
