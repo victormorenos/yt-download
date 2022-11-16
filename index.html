@@ -5,31 +5,32 @@
     <title>Baixar do Instagram</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://kit.fontawesome.com/fcab54a5d4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css" />
 
     <style type="text/css">
     
     * { font-family: -apple-system, 'SF Pro Display' }
         
-        @media (prefers-color-scheme: light) and (max-width:1024px){
+        @media (prefers-color-scheme: light) and (max-width:1050px){
             .shadow-videocover {
          filter: blur(80px)saturate(2);
            }
             }
-         @media (prefers-color-scheme: light) and (min-width:1024px){
+         @media (prefers-color-scheme: light) and (min-width:1050px){
             .shadow-videocover {
-         filter: blur(80px)saturate(2);
+         filter: blur(120px)saturate(2);
            }
             }
              
-             @media (prefers-color-scheme: dark) and (max-width:1024px){
+             @media (prefers-color-scheme: dark) and (max-width:1050px){
             .shadow-videocover {
          filter: blur(80px)saturate(1);
            }
             }
-         @media (prefers-color-scheme: light) and (min-width:1024px){
+         @media (prefers-color-scheme: dark) and (min-width:1050px){
             .shadow-videocover {
-         filter: blur(80px)saturate(1);
+         filter: blur(120px)saturate(1);
            }
             }
     
@@ -63,6 +64,7 @@
                  opacity: 1;
                }
     }
+
     
      @media (prefers-color-scheme: light) {
          #header {
@@ -87,6 +89,43 @@
                        
                        
      }
+     
+    .fa-chevron-down{
+        font-family: "Font Awesome 6 Pro";
+        font-weight: 800;
+        content: "\f078";
+        font-size: 19px;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        right: 100px;
+        margin-right: -40px;
+        position: relative;
+        color: #0084ff;
+    }
+    
+    .icon::before {
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+      }
+      
+      @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      
+      @keyframes tvFX {
+              0% { opacity: 0.6; }
+              25% { opacity: 1; }
+              50% { opacity: 0.7; }
+              75% { opacity: 0.8; }
+              100% { opacity: 0.6; }
+            }
     
     body {
         margin:0;
@@ -122,17 +161,26 @@
        .hero-videocover {
        position: relative;
        border-radius: 20px;
+       animation: fadeIn 1s;
       
        }
        
        .shadow-videocover {
+           animation: tvFX 6s ease-in infinite;
          -webkit-backface-visibility: hidden;
          -moz-backface-visibility: hidden;
          -webkit-transform: translate3d(0, 0, 0);
          -moz-transform: translate3d(0, 0, 0);
        }
        
-       @media(min-width:1024px){
+       .animation-1 {
+           animation: fadeIn 1.2s;
+       }
+       .animation-2 {
+                  animation: fadeIn 2s ease;
+              }
+       
+       @media(min-width:1050px){
        #video-loaded{
        padding-top: 250px;
        display: flex;
@@ -144,8 +192,7 @@
        .shadow-videocover, .hero-videocover {
        width:700px}
            
-           .shadow-videocover {
-               filter: blur(100px)}
+    
        
        .hero-videocover {
                margin-top:-400px;
@@ -214,7 +261,7 @@
        
        
        
-       @media(max-width:1024px){
+       @media(max-width:1050px){
        #video-loaded{
        padding-top: 180px;
        text-align:center
@@ -312,18 +359,19 @@
 </div>
 
 <div id="video-info">
-<h2 class="mrl-40" style="font-weight:600">VIAGEM PARA O CARIBE | QUANTO CUSTA?</h2>
-<h3 class="mrl-40" style="font-weight:500;margin-bottom:40px;margin-top:-10px">We Love</h3>
+<h2 class="mrl-40 animation-1" style="font-weight:600">VIAGEM PARA O CARIBE | QUANTO CUSTA?</h2>
+<h3 class="mrl-40 animation-2" style="font-weight:500;margin-bottom:40px;margin-top:-10px">We Love</h3>
 
-<div>
-  <select id="customDropdown" required>
-    <option value="value-one">Vídeo</option>
-    <option value="value-one">Áudio</option>
+<div class="animation-2">
+  <select class="chevron-down" id="customDropdown" required>
+    <option class="chevron-down" value="value-one">Vídeo</option>
+    <option class="chevron-down" value="value-one">Áudio</option>
   </select>
+   <i class="fa-solid fa-chevron-down"></i>
   <a id="goBtn" href="https://redirector.googlevideo.com/videoplayback?expire=1668582496&ei=_zd0Y6OAHYPQ8wTE1YrwAw&ip=198.98.59.215&id=o-AJuy7gAYRYF2fCOpED-0U0JXw7gFOHe8XQDsSY8ccSd7&itag=22&source=youtube&requiressl=yes&mh=o8&mm=31%2C26&mn=sn-ab5l6ndy%2Csn-5hne6nzd&ms=au%2Conr&mv=m&mvi=2&pl=24&initcwndbps=136250&spc=SFxXNvG5b2W1ZUDvUQ7xlcIyAltd466hnlPN916omre8&vprv=1&mime=video%2Fmp4&ns=gCq_TOVxOkmDfHjS95u8goQJ&cnr=14&ratebypass=yes&dur=724.067&lmt=1658872544189039&mt=1668560504&fvip=2&fexp=24001373%2C24007246&c=WEB&txp=5318224&n=AQs9Bgh7fjbO2g&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cspc%2Cvprv%2Cmime%2Cns%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIhAJfkd92lL_RqPfVkT9Y1ZRrwBDzgX0u6VNrNabdISQLTAiBTAqq6na8_I-RSASmncUAKYgqhOLgL4OgVT1jAegBndw%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRQIgGlGde4rg2mueqSecDVQH8ijdiolbf8A3wJhnuXwhMKsCIQDy3hZD-i_Ish-q2jo2TIRjGQfdZGjlk9TdqksvHjURmg%3D%3D&range=0-" style="text-decoration:none" class="btn" download>BAIXAR</a>
 </div>
 
-<p class="mrl-40 text-info" style="margin-top:40px; font-weight:400">A melhor qualidade disponível já foi selecionada para você.</p>
+<p class="mrl-40 text-info animation-2" style="margin-top:40px; font-weight:400">A melhor qualidade disponível já foi selecionada para você.</p>
 
     
 </div>
@@ -340,4 +388,3 @@
 </body>
 
 </html>
-
