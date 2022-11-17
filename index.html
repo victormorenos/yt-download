@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="utf-8">
-    <title>Baixar do Instagram</title>
+    <title>Baixar do YouTube</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="https://kit.fontawesome.com/fcab54a5d4.js" crossorigin="anonymous"></script>
@@ -126,15 +126,15 @@
       @keyframes tvFX {
               0% { opacity: 0.6; }
               5% { transform: scale(1); }
-              17% { transform: scale(0.7); }
+              17% { transform: scale(0.9); }
               25% { opacity: 1; }
-              50% { opacity: 0.7; }
-              55% { transform: scale(1.3); }
-              62% { transform: scale(1.1); }
+              50% { opacity: 0.9; }
+              55% { transform: scale(1.1); }
+              62% { transform: scale(1.0); }
               65% { transform: scale(0.9); }
               71% { transform: scale(1); }
               75% { opacity: 0.8; }
-              89% { transform: scale(1.2); }
+              89% { transform: scale(1.1); }
               94% { transform: scale(1); }
               100% { opacity: 0.6; }
             }
@@ -159,7 +159,6 @@
            padding-top:200px ;
            text-align: center;
            padding-bottom:600px;
-           display:none
        }
        
        #video-loaded {
@@ -202,7 +201,11 @@
        }
        
        .shadow-videocover, .hero-videocover {
-       width:700px}
+       width:700px;
+       height:393px;
+       object-fit: cover;
+           object-fit: cover
+       }
            
     
        
@@ -266,9 +269,7 @@
                  cursor: pointer;
                }
                
-               #goBtn:hover{
-                   background-color:#0065C4;
-               }
+              
        }
        
        
@@ -281,7 +282,9 @@
       
            
        .shadow-videocover, .hero-videocover {
-       max-width:360px;
+       width:360px;
+       height: 201px;
+       object-fit: cover;
        justify-self: center;
        }
        
@@ -338,9 +341,7 @@
                        bottom: 2px;
                        cursor: pointer;
                      }
-                     #goBtn:hover{
-                                        background-color:#0065C4;
-                                    }
+                     
        }
        
        
@@ -364,15 +365,15 @@
 
 <div id="video-cover">
 
-    <img class="shadow-videocover" src="https://i.ytimg.com/vi/M2SL626EfYo/maxresdefault.jpg">
+    <img class="shadow-videocover" src="https://i.ytimg.com/vi/XOcFCJ89niM/sddefault.jpg">
     
-    <img class="hero-videocover" src="https://i.ytimg.com/vi/M2SL626EfYo/maxresdefault.jpg">
+    <img class="hero-videocover" src="https://i.ytimg.com/vi/XOcFCJ89niM/sddefault.jpg">
     
 </div>
 
 <div id="video-info">
-<h2 class="mrl-40 animation-1" style="font-weight:600">VIAGEM PARA O CARIBE | QUANTO CUSTA?</h2>
-<h3 class="mrl-40 animation-2" style="font-weight:500;margin-bottom:40px;margin-top:-10px">We Love</h3>
+<h2 class="mrl-40 animation-1" style="font-weight:600">Dengo Meu - Claudia Leitte ft @Juliette e @Lucy Alves(Clipe Oficial ao Vivo na Prainha da Claudinha)</h2>
+<h3 class="mrl-40 animation-2" style="font-weight:500;margin-bottom:40px;margin-top:-10px">Claudia Leite</h3>
 
 <div class="animation-2">
   <select class="chevron-down" id="customDropdown" required>
@@ -390,11 +391,6 @@
 
 </div>
 
-<script type="text/javascript">
-        setTimeout(function() {
-            $("#video-loading").fadeOut();
-        }, 1500);
-</script>
 
 
 </body>
