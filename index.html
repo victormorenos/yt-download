@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>Baixar do YouTube</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="https://kit.fontawesome.com/fcab54a5d4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css" />
 
@@ -12,27 +11,29 @@
     
     * { font-family: -apple-system, 'SF Pro Display' }
         
-        @media (prefers-color-scheme: light) and (max-width:1050px){
+        @media (prefers-color-scheme: light) and (max-width:1179px){
             .shadow-videocover {
          filter: blur(80px)saturate(2);
            }
             }
-         @media (prefers-color-scheme: light) and (min-width:1050px){
+         @media (prefers-color-scheme: light) and (min-width:1179px){
             .shadow-videocover {
          filter: blur(120px)saturate(2);
            }
             }
              
-             @media (prefers-color-scheme: dark) and (max-width:1050px){
+             @media (prefers-color-scheme: dark) and (max-width:1179px){
             .shadow-videocover {
          filter: blur(80px)saturate(1);
            }
             }
-         @media (prefers-color-scheme: dark) and (min-width:1050px){
+         @media (prefers-color-scheme: dark) and (min-width:1179px){
             .shadow-videocover {
          filter: blur(120px)saturate(1);
            }
             }
+    
+    
     
     @media (prefers-color-scheme: dark) {
         body {
@@ -67,14 +68,23 @@
         .shadow-videocover {
                  opacity: 1;
                }
+               
+    .sticky-header-scroll {
+        background:red!important;
+        position: fixed;
+                       }
+               
     }
 
     
      @media (prefers-color-scheme: light) {
          #header {
-                     background-color:#f2f2f500;
                      box-shadow: 0px 5px 40px #33333300;
                  }
+    .sticky-header-scroll {
+        background:red!important;
+        position: fixed;
+        }
                  
         .text-info {
             color:#888!important;
@@ -93,6 +103,7 @@
                        
                        
      }
+     
      
     .fa-chevron-down{
         font-family: "Font Awesome 6 Pro";
@@ -151,7 +162,6 @@
            padding-bottom:15px;
            margin: 0px;
            z-index: 9999999999999999999999999;
-           position: fixed;
            
        }
        
@@ -191,7 +201,11 @@
                   animation: fadeIn 2s ease;
               }
        
-       @media(min-width:1050px){
+       
+       
+       
+       
+       @media(min-width:1179px){
        #video-loaded{
        padding-top: 250px;
        display: flex;
@@ -202,12 +216,14 @@
        
        .shadow-videocover, .hero-videocover {
        width:700px;
-       height:393px;
+       height:392px;
        object-fit: cover;
            object-fit: cover
        }
            
-    
+    .titulo {
+        width: 85%;
+    }
        
        .hero-videocover {
                margin-top:-400px;
@@ -220,7 +236,7 @@
        }
        
        #video-cover {
-                  margin-left: 50px;
+                  margin-left: 100px;
            
        }
               
@@ -274,7 +290,8 @@
        
        
        
-       @media(max-width:1050px){
+       
+       @media(max-width:1179px){
        #video-loaded{
        padding-top: 180px;
        text-align:center
@@ -365,14 +382,14 @@
 
 <div id="video-cover">
 
-    <img class="shadow-videocover" src="https://i.ytimg.com/vi_webp/LXb3EKWsInQ/sddefault.webp">
+    <img class="shadow-videocover" src="https://i.ytimg.com/an_webp/ieKAhG_gdCw/mqdefault_6s.webp?du=3000&sqp=CPTb6JsG&rs=AOn4CLDgHJqolw4HXFk-khA8ln5jM2biDg">
     
-    <img class="hero-videocover" src="https://i.ytimg.com/vi_webp/LXb3EKWsInQ/sddefault.webp">
+    <img class="hero-videocover" src="https://i.ytimg.com/an_webp/ieKAhG_gdCw/mqdefault_6s.webp?du=3000&sqp=CPTb6JsG&rs=AOn4CLDgHJqolw4HXFk-khA8ln5jM2biDg">
     
 </div>
 
 <div id="video-info">
-<h2 class="mrl-40 animation-1" style="font-weight:600">Dengo Meu - Claudia Leitte ft @Juliette e @Lucy Alves(Clipe Oficial ao Vivo na Prainha da Claudinha)</h2>
+<h2 class="mrl-40 animation-1 titulo" style="font-weight:600">Dengo Meu - Claudia Leitte ft @Juliette e @Lucy Alves(Clipe Oficial ao Vivo na Prainha da Claudinha)</h2>
 <h3 class="mrl-40 animation-2" style="font-weight:500;margin-bottom:40px;margin-top:-10px">Claudia Leite</h3>
 
 <div class="animation-2">
@@ -381,16 +398,25 @@
     <option class="chevron-down" value="value-one">Áudio</option>
   </select>
    <i class="fa-solid fa-chevron-down"></i>
-  <a id="goBtn" href="https://redirector.googlevideo.com/videoplayback?expire=1668582496&ei=_zd0Y6OAHYPQ8wTE1YrwAw&ip=198.98.59.215&id=o-AJuy7gAYRYF2fCOpED-0U0JXw7gFOHe8XQDsSY8ccSd7&itag=22&source=youtube&requiressl=yes&mh=o8&mm=31%2C26&mn=sn-ab5l6ndy%2Csn-5hne6nzd&ms=au%2Conr&mv=m&mvi=2&pl=24&initcwndbps=136250&spc=SFxXNvG5b2W1ZUDvUQ7xlcIyAltd466hnlPN916omre8&vprv=1&mime=video%2Fmp4&ns=gCq_TOVxOkmDfHjS95u8goQJ&cnr=14&ratebypass=yes&dur=724.067&lmt=1658872544189039&mt=1668560504&fvip=2&fexp=24001373%2C24007246&c=WEB&txp=5318224&n=AQs9Bgh7fjbO2g&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cspc%2Cvprv%2Cmime%2Cns%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIhAJfkd92lL_RqPfVkT9Y1ZRrwBDzgX0u6VNrNabdISQLTAiBTAqq6na8_I-RSASmncUAKYgqhOLgL4OgVT1jAegBndw%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRQIgGlGde4rg2mueqSecDVQH8ijdiolbf8A3wJhnuXwhMKsCIQDy3hZD-i_Ish-q2jo2TIRjGQfdZGjlk9TdqksvHjURmg%3D%3D&range=0-" style="text-decoration:none" class="btn" download>BAIXAR</a>
+  <a id="goBtn" href="https://rr2---sn-4g5edn6y.googlevideo.com/videoplayback?expire=1668977013&ei=FT16Y9vhH5yD6dsP_O2tyAE&ip=23.88.39.196&id=o-AGKYPJJ4P7XxgexdGO6RZoq6Jqq9KVbW9do-Nvdkzu6t&itag=22&source=youtube&requiressl=yes&mh=S8&mm=31%2C29&mn=sn-4g5edn6y%2Csn-4g5lznlz&ms=au%2Crdu&mv=m&mvi=2&pl=26&initcwndbps=507500&vprv=1&svpuc=1&mime=video%2Fmp4&ratebypass=yes&dur=180.024&lmt=1643839017546583&mt=1668955266&fvip=4&fexp=24001373%2C24007246&c=ANDROID&txp=4532434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Csvpuc%2Cmime%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRAIgV3eEzmqho6eX-0uCARy-GnNiyOdF54RGbYKkOW9I3YECIHbYlUGFPOA72DGuMfxuNH1x4A-fAVa-cvREASNcsAEQ&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRQIhAKI7q8awtQYS-4GQaSOVu1xzlIua1GictR2vHqZt3Kv9AiAShUpcM9zTcQZ2g-6pIVAghZCuUojaCDsSvzBe4l6Dqw%3D%3D" style="text-decoration:none" class="btn" onclick="window.location.href='file.mp4'">BAIXAR</a>
 </div>
 
-<p class="mrl-40 text-info animation-2" style="margin-top:40px; font-weight:400">A melhor qualidade disponível já foi selecionada para você.</p>
+<p class="mrl-40 text-info animation-2" style="margin-top:40px; font-weight:400"></p>
 
     
 </div>
 
 </div>
+<iframe id="invisible" style="display:none;"></iframe>
+ <script>
+     
+downloadCSV: function(data){
+    var MIME_TYPE = "video/mp4";
 
+    var blob = new Blob([data], {type: MIME_TYPE});
+    window.location.href = window.URL.createObjectURL(blob);
+}
+ </script>
 
 
 </body>
