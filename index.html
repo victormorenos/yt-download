@@ -1,424 +1,562 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="utf-8">
-    <title>Baixar do YouTube</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://kit.fontawesome.com/fcab54a5d4.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css" />
-
-    <style type="text/css">
-    
-    * { font-family: -apple-system, 'SF Pro Display' }
-        
-        @media (prefers-color-scheme: light) and (max-width:1179px){
-            .shadow-videocover {
+   <head>
+      <meta charset="utf-8">
+      <title>Baixar do YouTube</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="https://kit.fontawesome.com/fcab54a5d4.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="style.css" />
+      <style type="text/css">
+         * { font-family: -apple-system, 'SF Pro Display' }
+         @media (prefers-color-scheme: light) and (max-width:1179px){
+         .shadow-videocover {
          filter: blur(80px)saturate(2);
-           }
-            }
+         }
+         }
          @media (prefers-color-scheme: light) and (min-width:1179px){
-            .shadow-videocover {
+         .shadow-videocover {
          filter: blur(120px)saturate(2);
-           }
-            }
-             
-             @media (prefers-color-scheme: dark) and (max-width:1179px){
-            .shadow-videocover {
+         }
+         }
+         @media (prefers-color-scheme: dark) and (max-width:1179px){
+         .shadow-videocover {
          filter: blur(80px)saturate(1);
-           }
-            }
+         }
+         }
          @media (prefers-color-scheme: dark) and (min-width:1179px){
-            .shadow-videocover {
+         .shadow-videocover {
          filter: blur(120px)saturate(1);
-           }
-            }
-    
-    
-    
-    @media (prefers-color-scheme: dark) {
-        body {
-            background-color: #000;
-        }
-        
-        #customDropdown{
-            background-color: #222!important;
-            box-shadow: 0px 5px 40px #11111140;
-        }
-        
-        h2 {
-            color: white;
-        }
-        
-        h3{
-            color:#808080;
-        }
-        
-        p {
-                    color:#333;
-                }
-                
-        #header {
-            background-color:#0000;
-        }
-        
-        #video-loaded, #video-loading {
-            background-color: #000!important;
-        }
-        
-        .shadow-videocover {
-                 opacity: 1;
-               }
-               
-    .sticky-header-scroll {
-        background:red!important;
-        position: fixed;
-                       }
-               
-    }
-
-    
-     @media (prefers-color-scheme: light) {
+         }
+         }
+         @media (prefers-color-scheme: dark) {
+         body {
+         background-color: #000;
+         }
+         #customDropdown{
+         background-color: #222!important;
+         box-shadow: 0px 5px 40px #11111140;
+         }
+         h2 {
+         color: white;
+         }
+         h3{
+         color:#808080;
+         }
+         p {
+         color:#333;
+         }
          #header {
-                     box-shadow: 0px 5px 40px #33333300;
-                 }
-    .sticky-header-scroll {
-        background:red!important;
-        position: fixed;
-        }
-                 
-        .text-info {
-            color:#888!important;
-        }
-        
-        .shadow-videocover {
-                 opacity: 1;
-               }
-               
-        h3 {
-                color:#777;
-                }
-        p {
-                color:#C8C8C8;
-                }
-                       
-                       
-     }
-     
-     
-    .fa-chevron-down{
-        font-family: "Font Awesome 6 Pro";
-        font-weight: 800;
-        content: "\f078";
-        font-size: 19px;
-        display: inline-block;
-        font-style: normal;
-        font-variant: normal;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-        right: 100px;
-        margin-right: -40px;
-        position: relative;
-        color: #0084ff;
-    }
-    
-    .icon::before {
-        display: inline-block;
-        font-style: normal;
-        font-variant: normal;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-      }
-      
-      @keyframes fadeIn {
-        0% { opacity: 0; }
-        100% { opacity: 1; }
-      }
-      
-      @keyframes tvFX {
-              0% { opacity: 0.6; }
-              5% { transform: scale(1); }
-              17% { transform: scale(0.9); }
-              25% { opacity: 1; }
-              50% { opacity: 0.9; }
-              55% { transform: scale(1.1); }
-              62% { transform: scale(1.0); }
-              65% { transform: scale(0.9); }
-              71% { transform: scale(1); }
-              75% { opacity: 0.8; }
-              89% { transform: scale(1.1); }
-              94% { transform: scale(1); }
-              100% { opacity: 0.6; }
-            }
-    
-    body {
-        margin:0;
-    }
-    
-       #header {
-           width: 100%;
-           height: 60px;
-           display: flex;
-           padding-top:15px;
-           padding-bottom:15px;
-           margin: 0px;
-           z-index: 9999999999999999999999999;
-           
-       }
-       
-       #video-loading {
-           padding-top:200px ;
-           text-align: center;
-           padding-bottom:600px;
-       }
-       
-       #video-loaded {
-           padding-bottom:300px
-              }
-       
-       #video-cover {
-           display: inline-grid
-       }
-       
-       .hero-videocover {
-       position: relative;
-       border-radius: 20px;
-       animation: fadeIn 1s;
-      
-       }
-       
-       .shadow-videocover {
-           animation: tvFX 9s ease infinite;
+         background-color:#0000;
+         }
+         #video-loaded, #video-loading {
+         background-color: #000!important;
+         }
+         .shadow-videocover {
+         opacity: 1;
+         }
+         .sticky-header-scroll {
+         background:red!important;
+         position: fixed;
+         }
+         }
+         @media (prefers-color-scheme: light) {
+         #header {
+         box-shadow: 0px 5px 40px #33333300;
+         }
+         .sticky-header-scroll {
+         background:red!important;
+         position: fixed;
+         }
+         .text-info {
+         color:#888!important;
+         }
+         .shadow-videocover {
+         opacity: 1;
+         }
+         h3 {
+         color:#777;
+         }
+         p {
+         color:#C8C8C8;
+         }
+         }
+         .fa-chevron-down{
+         font-family: "Font Awesome 6 Pro";
+         font-weight: 800;
+         content: "\f078";
+         font-size: 19px;
+         display: inline-block;
+         font-style: normal;
+         font-variant: normal;
+         text-rendering: auto;
+         -webkit-font-smoothing: antialiased;
+         right: 100px;
+         margin-right: -40px;
+         position: relative;
+         color: #0084ff;
+         }
+         .icon::before {
+         display: inline-block;
+         font-style: normal;
+         font-variant: normal;
+         text-rendering: auto;
+         -webkit-font-smoothing: antialiased;
+         }
+         @keyframes fadeIn {
+         0% { opacity: 0; }
+         100% { opacity: 1; }
+         }
+         @keyframes tvFX {
+         0% { opacity: 0.6; }
+         5% { transform: scale(1); }
+         17% { transform: scale(0.9); }
+         25% { opacity: 1; }
+         50% { opacity: 0.9; }
+         55% { transform: scale(1.1); }
+         62% { transform: scale(1.0); }
+         65% { transform: scale(0.9); }
+         71% { transform: scale(1); }
+         75% { opacity: 0.8; }
+         89% { transform: scale(1.1); }
+         94% { transform: scale(1); }
+         100% { opacity: 0.6; }
+         }
+         body {
+         margin:0;
+         }
+         #header {
+         width: 100%;
+         height: 60px;
+         display: flex;
+         padding-top:15px;
+         padding-bottom:15px;
+         margin: 0px;
+         z-index: 9999999999999999999999999;
+         position: fixed;
+         }
+         #video-loading {
+         padding-top:200px ;
+         text-align: center;
+         padding-bottom:600px;
+         }
+         #video-loaded {
+         padding-bottom:200px
+         }
+         #video-cover {
+         display: inline-grid
+         }
+         .hero-videocover {
+         position: relative;
+         border-radius: 20px;
+         animation: fadeIn 1s;
+         }
+         .shadow-videocover {
+         animation: tvFX 9s ease infinite;
          -webkit-backface-visibility: hidden;
          -moz-backface-visibility: hidden;
          -webkit-transform: translate3d(0, 0, 0);
          -moz-transform: translate3d(0, 0, 0);
-       }
-       
-       .animation-1 {
-           animation: fadeIn 1.2s;
-       }
-       .animation-2 {
-                  animation: fadeIn 2s ease;
-              }
-       
-       
-       
-       
-       
-       @media(min-width:1179px){
-       #video-loaded{
-       padding-top: 250px;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       z-index: 0;
-       }
-       
-       .shadow-videocover, .hero-videocover {
-       width:700px;
-       height:392px;
-       object-fit: cover;
-           object-fit: cover
-       }
-           
-    .titulo {
-        width: 85%;
-    }
-       
-       .hero-videocover {
-               margin-top:-400px;
-           
-       }
-       
-       #video-info {
-           margin-left: 80px;
-           
-       }
-       
-       #video-cover {
-                  margin-left: 100px;
-           
-       }
-              
-        #header {
-            justify-content: flex-end;
+         }
+         .animation-1 {
+         animation: fadeIn 1.2s;
+         }
+         .animation-2 {
+         animation: fadeIn 2s ease;
+         }
+         @media(min-width:1179px){
+         #video-loaded{
+         padding-top: 250px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         z-index: 0;
+         }
+         .shadow-videocover, .hero-videocover {
+         width:700px;
+         height:392px;
+         object-fit: cover;
+         object-fit: cover
+         }
+         .titulo {
+         width: 85%;
+         }
+         .hero-videocover {
+         margin-top:-400px;
+         }
+         #video-info {
+         margin-left: 70px;
+         }
+         #video-cover {
+         margin-left: 50px;
+         }
+         #header {
+         justify-content: flex-end;
+         }
+         #header img {
+         margin-right: 15px;
+         }
+         .dropdown{
+         text-align: center;
+         left: 0;
+         top: 30%;
+         position: relative;
+         }
+         #customDropdown{
+         height: 50px;  
+         width: 200px;
+         padding: 0 20px;
+         border-radius: 50px;
+         border: 1.5px solid #0084FF;
+         color: #0084FF;
+         font-size: 20px;
+         outline: none;
+         appearance: none; 
+         -webkit-appearance: none;
+         -moz-appearance: none;
+         background-color:#f2f2f5
+         }
+         #goBtn{
+         height: 50px;
+         width: 50px;
+         padding: 16px 28px;
+         border-radius: 50PX;
+         background-color:#0084FF;
+         color: #fff;
+         font-weight: bold;
+         font-size: 15px;
+         position: relative;
+         right: 54px;
+         bottom: 1px;
+         cursor: pointer;
+         }
+         }
+         @media(max-width:1179px){
+         #video-loaded{
+         padding-top: 180px;
+         text-align:center
+         }
+         .shadow-videocover, .hero-videocover {
+         width:360px;
+         height: 201px;
+         object-fit: cover;
+         justify-self: center;
+         }
+         .hero-videocover {
+         margin-top:-225px;}
+         #header {
+         place-content: center;
+         }
+         #customDropdown {
+         margin-left: 50px;
+         }
+         .mrl {
+         margin-right:20px;
+         margin-left:20px;
+         }
+         .mrl-40 {
+         margin-right:40px;
+         margin-left:40px;
+         }
+         .dropdown{
+         text-align: center;
+         left: 0;
+         top: 30%;
+         position: relative;
+         }
+         #customDropdown{
+         height: 49px;  
+         width: 200px;
+         padding: 0 20px;
+         border-radius: 50px;
+         border: 1.5px solid #0084FF;
+         color: #0084FF;
+         font-size: 20px;
+         outline: none;
+         appearance: none; 
+         -webkit-appearance: none;
+         -moz-appearance: none;
+         background-color:#f2f2f5
+         }
+         #goBtn{
+         height: 50px;
+         width: 50px;
+         padding: 15px 28px;
+         border-radius: 50PX;
+         background-color:#0084FF;
+         color: #fff;
+         font-weight: bold;
+         font-size: 15px;
+         position: relative;
+         right: 54px;
+         bottom: 2px;
+         cursor: pointer;
+         }
+         }
+         /* Style the tab */
+         .tab-info {
+         overflow: hidden;
+         border-top: 1px solid #f2f2f5;
+         border-bottom: 1px solid #f2f2f5;
+         background-color: #fff;
+         color: blue!important;
+         }
+         .politicaModal {
+         border-top: 1px solid #f2f2f5;
+         }
+         .tab-info button {
+         overflow: hidden;
+         border-top: 1px solid #f2f2f5;
+         border-bottom: 1px solid #f2f2f5;
+         background-color: #fff;
+         color: #868686
+         }
+         /* Style the buttons inside the tab */
+         .tab-info button {
+         background-color: inherit;
+         float: left;
+         border: none;
+         outline: none;
+         cursor: pointer;
+         padding: 14px 16px;
+         transition: 0.3s;
+         font-size: 17px;
+         }
+         /* Change background color of buttons on hover */
+         .tab-info button:hover {
+         background-color: #fff;
+         color:#333
+         }
+         /* Create an active/current tablink class */
+         .tab-info button.active {
+         background-color: #fff;
+         color:#0474D4
+         }
+         /* Style the tab content */
+         .tab-infocontent {
+         display:none;
+         padding: 6px 12px;
+         -webkit-animation: fadeEffect 1s;
+         animation: fadeEffect 1s;
+         height:300px;
+         padding:20px
+         }
+         .tab-infocontent a {
+         font-weight:500;
+         color:#0474D4
+         }
+         .tab-info button {
+         font-size:15px
+         }
+         #politica-header {
+         padding-top:20px;
+         padding-left:15px;
+         padding-right:20px;
+         padding-bottom:20px;
+         font-size:18px
+         }
+         /* Fade in tabs */
+         @-webkit-keyframes fadeEffect {
+         from {opacity: 0;}
+         to {opacity: 1;}
+         }
+         @keyframes fadeEffect {
+         from {opacity: 0;}
+         to {opacity: 1;}
+         }
+         .taboverlay {
+         z-index: 9999999999999999999999!important;
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         backdrop-filter: blur(5px);
+         -webkit-backdrop-filter: blur(5px);
+         background-color: #fff0;
+         display:none;
+         }
+         @media (max-width:768px){
+         #politicas {
+         position: fixed;
+         bottom: 0px;
+         width: 100%;
+         display: block;
+         border-radius: 13px 13px 0px 0px;
+         background-color:#fff;
+         box-shadow: 0px -10px 90px 0px #00000042;
+         }
+         #fechar-modal {
+         height: calc(100% - 520px);
+         position: relative;
+         top: 0;
+         background-color: #0000ff00;
+         z-index: 999999999;
+         display: block;
+         }
+         }
+         @media (min-width:768px){
+         #politicas {
+         position: relative;
+         width: 500px;
+         border-radius: 13px 13px 13px 13px;
+         margin-left: auto;
+         margin-right: auto;
+         background-color:#fff;
+         vertical-align: middle;
+         overflow-x: hidden;
+         align-items: center;
+         align-items: center;
+         top:15%;
+         box-shadow: 0px 00px 80px 0px #00000052;
+         }}
+         .showcard {
+         display:block!important;
+         animation-name:fade-in;
+         animation-duration: 0.3s;
+         animation-timing-function: ease  
+         }
+         .hidecardanimation {
+         animation-name: fade-out;
+         animation-duration: 0.3s;
+         animation-timing-function: ease;
+         -webkit-animation: fade-out 0.3s;
+         }
+         .mostrar-aba {
+         display:block
+         }
+         @keyframes fade-in {
+         0% {
+         opacity:0;
+         transform:  translate(0px,20px)}
+         100% {
+         opacity:1;
+         transform:  translate(0px,00px)}
+         }
+         @-webkit-keyframes fade-out {
+         0% {
+         opacity:1;
+         transform:  translate(0px,0px)}
+         100% {
+         opacity:0;
+         transform:  translate(0px,20px)}
+         }
+         .fechar-modal {
+         padding-left: 7px;
+         padding-right: 7px;
+         border-radius: 50%;
+         background-color: #ff9300;
+         color: white;
+         font-weight: 600;
+         }
+         @keyframes sticky-fade-in {
+         0% {
+         opacity:0;}
+         100% {
+         opacity:1;}
+         }       
+      </style>
+   </head>
+   <body>
+      <div id="header">
+         <img src="https://professordoiphone.com.br/wp-content/uploads/2022/11/16678751536369c151a4477.png">
+      </div>
+      <div id="video-loading">
+         <img height="40px" src="https://checkout.professordoiphone.com.br/images/aguarde.gif">
+         <h2>Preparando seu vídeo...</h2>
+      </div>
+      <div id="video-loaded">
+         <div id="video-cover">
+            <img class="shadow-videocover" src="https://i.ytimg.com/an_webp/QCOhLv3MOco/mqdefault_6s.webp?du=3000&sqp=CLiq65sG&rs=AOn4CLBhEWcfPHICWqcCqaqOyOY8DDqdhQ">
+            <img class="hero-videocover" src="https://i.ytimg.com/an_webp/QCOhLv3MOco/mqdefault_6s.webp?du=3000&sqp=CLiq65sG&rs=AOn4CLBhEWcfPHICWqcCqaqOyOY8DDqdhQ">
+         </div>
+         <div id="video-info">
+            <h2 class="mrl-40 animation-1 titulo" style="font-weight:600">Testing Action mode | Shot on iPhone 14 Pro</h2>
+            <h3 class="mrl-40 animation-2" style="font-weight:500;margin-bottom:40px;margin-top:-10px">Apple</h3>
+            <div class="animation-2">
+               <select class="chevron-down" id="customDropdown" required>
+                  <option class="chevron-down" value="value-one">Vídeo</option>
+                  <option class="chevron-down" value="value-one">Áudio</option>
+               </select>
+               <i class="fa-solid fa-chevron-down"></i>
+               <a id="goBtn" href="https://rr2---sn-4g5edn6y.googlevideo.com/videoplayback?expire=1668977013&ei=FT16Y9vhH5yD6dsP_O2tyAE&ip=23.88.39.196&id=o-AGKYPJJ4P7XxgexdGO6RZoq6Jqq9KVbW9do-Nvdkzu6t&itag=22&source=youtube&requiressl=yes&mh=S8&mm=31%2C29&mn=sn-4g5edn6y%2Csn-4g5lznlz&ms=au%2Crdu&mv=m&mvi=2&pl=26&initcwndbps=507500&vprv=1&svpuc=1&mime=video%2Fmp4&ratebypass=yes&dur=180.024&lmt=1643839017546583&mt=1668955266&fvip=4&fexp=24001373%2C24007246&c=ANDROID&txp=4532434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Csvpuc%2Cmime%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRAIgV3eEzmqho6eX-0uCARy-GnNiyOdF54RGbYKkOW9I3YECIHbYlUGFPOA72DGuMfxuNH1x4A-fAVa-cvREASNcsAEQ&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRQIhAKI7q8awtQYS-4GQaSOVu1xzlIua1GictR2vHqZt3Kv9AiAShUpcM9zTcQZ2g-6pIVAghZCuUojaCDsSvzBe4l6Dqw%3D%3D" style="text-decoration:none" class="btn" onclick="window.location.href='file.mp4'">BAIXAR</a>
+            </div>
+            <p class="mrl-40 text-info animation-2" style="margin-top:40px; font-weight:400"></p>
+         </div>
+      </div>
+      <script>
+         function openInfo(evt, infoName) {
+           var i, tabcontent, tablinks;
+           tabcontent = document.getElementsByClassName("tab-infocontent");
+           for (i = 0; i < tabcontent.length; i++) {
+             tabcontent[i].style.display = "none";
+           }
+           tablinks = document.getElementsByClassName("tab-infolinks");
+           for (i = 0; i < tablinks.length; i++) {
+             tablinks[i].className = tablinks[i].className.replace(" active", "");
+           }
+           document.getElementById(infoName).style.display = "block";
+           evt.currentTarget.className += " active";
+         }
+         
+         
+         
+         function showId(obj) {
+                 var id=obj;
+                 var csp = document.getElementById('taboverlay');
+                 csp.classList.add("showcard");
+                 var csp = document.getElementById('Termos');
+                 csp.classList.add("mostrar-aba");
+                 $("html").css("overflow", "hidden");
+            }
             
-        }
-        
-        #header img {
-                    margin-right: 15px;
             
-        }
-                
-        .dropdown{
-                 text-align: center;
-                 left: 0;
-                 top: 30%;
-                 position: relative;
-               }
-               #customDropdown{
-                 height: 50px;  
-                 width: 200px;
-                 padding: 0 20px;
-                 border-radius: 50px;
-                 border: 1.5px solid #0084FF;
-                 color: #0084FF;
-                 font-size: 20px;
-                 outline: none;
-                 appearance: none; 
-                 -webkit-appearance: none;
-                 -moz-appearance: none;
-                 background-color:#f2f2f5
-               }
-               #goBtn{
-                 height: 50px;
-                 width: 50px;
-                 padding: 16px 28px;
-                 border-radius: 50PX;
-                 background-color:#0084FF;
-                 color: #fff;
-                 font-weight: bold;
-                 font-size: 15px;
-                 position: relative;
-                 right: 54px;
-                 bottom: 1px;
-                 cursor: pointer;
-               }
-               
-              
-       }
-       
-       
-       
-       
-       @media(max-width:1179px){
-       #video-loaded{
-       padding-top: 180px;
-       text-align:center
-       }
-      
-           
-       .shadow-videocover, .hero-videocover {
-       width:360px;
-       height: 201px;
-       object-fit: cover;
-       justify-self: center;
-       }
-       
-       .hero-videocover {
-        margin-top:-225px;}
-       
-       #header {
-           place-content: center;
-       }
-       
-       #customDropdown {
-           margin-left: 50px;
-       }
-       .mrl {
-           margin-right:20px;
-           margin-left:20px;
-       }
-       .mrl-40 {
-                  margin-right:40px;
-                  margin-left:40px;
-              }
-              
-              .dropdown{
-                       text-align: center;
-                       left: 0;
-                       top: 30%;
-                       position: relative;
-                     }
-                     #customDropdown{
-                       height: 49px;  
-                       width: 200px;
-                       padding: 0 20px;
-                       border-radius: 50px;
-                       border: 1.5px solid #0084FF;
-                       color: #0084FF;
-                       font-size: 20px;
-                       outline: none;
-                       appearance: none; 
-                       -webkit-appearance: none;
-                       -moz-appearance: none;
-                       background-color:#f2f2f5
-                     }
-                     #goBtn{
-                       height: 50px;
-                       width: 50px;
-                       padding: 15px 28px;
-                       border-radius: 50PX;
-                       background-color:#0084FF;
-                       color: #fff;
-                       font-weight: bold;
-                       font-size: 15px;
-                       position: relative;
-                       right: 54px;
-                       bottom: 2px;
-                       cursor: pointer;
-                     }
-                     
-       }
-       
-       
-       
-    </style>
-</head>
-
-<body>
-
-<div id="header">
-    <img src="https://professordoiphone.com.br/wp-content/uploads/2022/11/16678751536369c151a4477.png">
-</div>
-    
-    
-<div id="video-loading"> 
-    <img height="40px" src="https://checkout.professordoiphone.com.br/images/aguarde.gif">
-    <h2>Preparando seu vídeo...</h2>
-    </div>
-    
-<div id="video-loaded"> 
-
-<div id="video-cover">
-
-    <img class="shadow-videocover" src="https://i.ytimg.com/an_webp/ieKAhG_gdCw/mqdefault_6s.webp?du=3000&sqp=CPTb6JsG&rs=AOn4CLDgHJqolw4HXFk-khA8ln5jM2biDg">
-    
-    <img class="hero-videocover" src="https://i.ytimg.com/an_webp/ieKAhG_gdCw/mqdefault_6s.webp?du=3000&sqp=CPTb6JsG&rs=AOn4CLDgHJqolw4HXFk-khA8ln5jM2biDg">
-    
-</div>
-
-<div id="video-info">
-<h2 class="mrl-40 animation-1 titulo" style="font-weight:600">Dengo Meu - Claudia Leitte ft @Juliette e @Lucy Alves(Clipe Oficial ao Vivo na Prainha da Claudinha)</h2>
-<h3 class="mrl-40 animation-2" style="font-weight:500;margin-bottom:40px;margin-top:-10px">Claudia Leite</h3>
-
-<div class="animation-2">
-  <select class="chevron-down" id="customDropdown" required>
-    <option class="chevron-down" value="value-one">Vídeo</option>
-    <option class="chevron-down" value="value-one">Áudio</option>
-  </select>
-   <i class="fa-solid fa-chevron-down"></i>
-  <a id="goBtn" href="https://rr2---sn-4g5edn6y.googlevideo.com/videoplayback?expire=1668977013&ei=FT16Y9vhH5yD6dsP_O2tyAE&ip=23.88.39.196&id=o-AGKYPJJ4P7XxgexdGO6RZoq6Jqq9KVbW9do-Nvdkzu6t&itag=22&source=youtube&requiressl=yes&mh=S8&mm=31%2C29&mn=sn-4g5edn6y%2Csn-4g5lznlz&ms=au%2Crdu&mv=m&mvi=2&pl=26&initcwndbps=507500&vprv=1&svpuc=1&mime=video%2Fmp4&ratebypass=yes&dur=180.024&lmt=1643839017546583&mt=1668955266&fvip=4&fexp=24001373%2C24007246&c=ANDROID&txp=4532434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Csvpuc%2Cmime%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRAIgV3eEzmqho6eX-0uCARy-GnNiyOdF54RGbYKkOW9I3YECIHbYlUGFPOA72DGuMfxuNH1x4A-fAVa-cvREASNcsAEQ&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRQIhAKI7q8awtQYS-4GQaSOVu1xzlIua1GictR2vHqZt3Kv9AiAShUpcM9zTcQZ2g-6pIVAghZCuUojaCDsSvzBe4l6Dqw%3D%3D" style="text-decoration:none" class="btn" onclick="window.location.href='file.mp4'">BAIXAR</a>
-</div>
-
-<p class="mrl-40 text-info animation-2" style="margin-top:40px; font-weight:400"></p>
-
-    
-</div>
-
-</div>
-<iframe id="invisible" style="display:none;"></iframe>
- <script>
-     
-downloadCSV: function(data){
-    var MIME_TYPE = "video/mp4";
-
-    var blob = new Blob([data], {type: MIME_TYPE});
-    window.location.href = window.URL.createObjectURL(blob);
-}
- </script>
-
-
-</body>
-
+            
+          function fechar() {
+         var elems = document.querySelectorAll(".showcard");
+         
+         [].forEach.call(elems, function(el) {
+         el.classList.add('hidecardanimation');
+         setTimeout(function() {
+           el.classList.remove("showcard");
+           el.classList.remove("hidecardanimation");
+         }, 300);
+         });
+         $("html").css("overflow", "auto");
+         }   
+         
+      </script>
+      <div style="text-align-last: center;padding-bottom:30px" class="small text-center">
+         <p onclick="showId()">Termos | Contato</p>
+      </div>
+   </body>
+   <footer>
+      <div id="taboverlay" class="taboverlay">
+         <div onclick="fechar()" id="fechar-modal"></div>
+         <div id="politicas">
+            <div id="politica-header" style="display:flex;justify-content: space-between;
+               align-items:center;paddding-top:20px">
+               <span style="font-weight:500;margin-bottom:-3px">Políticas do Professor do iPhone</span>
+               <span class="fechar-modal" onclick="fechar()">&#x2715;</span>
+            </div>
+            <div id="politica-tabela">
+            </div>
+            <div class="tab-info">
+               <button class="tab-infolinks active" onclick="openInfo(event, 'Termos')">Termos</button>
+               <button class="tab-infolinks" onclick="openInfo(event, 'Contato')">Contato</button>
+            </div>
+            <div id="Termos" class="tab-infocontent">
+               <h4 style="font-weight: 600;">Termos de pagamento</h4>
+               <p>Todos os pagamentos são processados com segurança pelo Mercado Pago. <br/><br/>Consulte os <a href="https://www.mercadopago.com.br/privacidade">termos</a> e a <a href="https://www.mercadopago.com.br/privacidade/declaracao-privacidade">política de privacidade do Mercado Pago.</a></p>
+            </div>
+            <div id="Contato" class="tab-infocontent">
+               <h4 style="font-weight: 600;">Fale com o suporte</h4>
+               <p>Em caso de dúvidas, envie um e-mail para <a href=mailto:suporte@professordoiphone.com.br?subject=Suporte%20com%20Compra>suporte@professordoiphone.com.br</a></p>
+               <a href="https://bcrw.apple.com/sms:open?service=iMessage&recipient=urn:biz:9fc2bfc8-d741-4706-ba2f-86a8ab9cdc91&body=Oi%20Steve!"  target="_blank"><img src="https://professordoiphone.com.br/wp-content/uploads/2020/04/Messages-for-Business-Brazilian-Get-Help-White.png" alt="sign" width="100%" class="img-fluid mt-20" ></a>
+            </div>
+            <div class="politicaModal">
+               <p style="text-align:center; font-size:14px; padding:10px; color:#777;margin-left:20px;margin-right:20px">Seus direitos conforme a nossa política de reembolso ou troca são complementares aos seus direitos estipulados pelas leis do consumidor em vigor.</p>
+            </div>
+         </div>
+      </div>
+   </footer>
 </html>
